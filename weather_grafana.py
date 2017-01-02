@@ -35,7 +35,7 @@ def send_msg(visibility, windSpeed, temperature, precipProbability, nearestStorm
 
 if __name__ == '__main__':
         while True:
-          api = requests.get('https://api.darksky.net/forecast/afa9c0b7688a6be368f3c829fb7ab85a/37.8267,-122.4233') #URI to pihole server api
+          api = requests.get('https://api.darksky.net/forecast/<API_KEY>/37.8267,-122.4233') #URI to pihole server api
 	  API_out = api.json()
 	  API_out = API_out['currently']
           nearestStormDistance = (API_out['nearestStormDistance'])
